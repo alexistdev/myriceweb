@@ -9,11 +9,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <!-- Site wrapper -->
 <div class="wrapper">
-<?php $this->load->view('template/v_navbar') ?>
-<?php $this->load->view('template/v_sidebar') ?>
-<?php $this->load->view('konten/k_user') ?>
-<?php $this->load->view('template/v_footer') ?>
+	<?php $this->load->view('template/v_navbar') ?>
+	<?php $this->load->view('template/v_sidebar') ?>
+	<?php $this->load->view('konten/k_produk') ?>
+	<?php $this->load->view('template/v_footer') ?>
 </div>
+
 
 <!-- jQuery -->
 <script src="<?= base_url('vendor/almasaeed2010/adminlte') ?>/plugins/jquery/jquery.min.js"></script>
@@ -30,12 +31,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <script src="<?= base_url('vendor/almasaeed2010/adminlte') ?>/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <script>
 	$(function () {
-		$("#tabelUser").DataTable({
+		$("#tabelkategori").DataTable({
 			"responsive": true,
 			"autoWidth": false,
 		});
 	});
-	/** After window Load */
 	$(window).bind("load", function() {
 		window.setTimeout(function() {
 			$(".alert").fadeTo(500, 0).slideUp(500, function() {
@@ -43,7 +43,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			});
 		}, 2000);
 	});
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	});
+
+	/** Saat tombol modal diklik */
+	$(document).on("click", "#tombolHapus", function () {
+		var token = $(this).data('id');
+		var newUrl = "<?= base_url('Mahasiswa/hapus/'); ?>" + token;
+		$("#urlKunci").attr('href', newUrl);
+	});
 </script>
+
 </body>
 
 </html>

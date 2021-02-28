@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 	<!-- Brand Logo -->
 	<a href="<?= base_url('Member'); ?>" class="brand-link">
-		<img src="<?= base_url('foto/logomurni.png'); ?>"
+		<img src="<?= base_url('foto/shops.png'); ?>"
 			 alt="AdminLTE Logo"
 			 class="brand-image img-circle elevation-3"
 			 style="opacity: .8">
@@ -16,7 +16,7 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 		<!-- Sidebar user (optional) -->
 		<div class="user-panel mt-3 pb-3 mb-3 d-flex">
 			<div class="image">
-				<img src="<?= base_url('foto/default.jpg'); ?>" class="img-circle elevation-2" alt="User Image">
+				<img src="<?= base_url('foto/man.png'); ?>" class="img-circle elevation-2" alt="User Image">
 			</div>
 			<div class="info">
 				<a href="#" class="d-block">Dashboard</a>
@@ -44,20 +44,19 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 						</p>
 					</a>
 				</li>
-
-				<li class="nav-item">
-					<a href="#" class="nav-link">
-						<i class="nav-icon fas fa-chart-bar"></i>
+				<li class="nav-item has-treeview">
+					<a href="<?= base_url('Pesanan'); ?>" class="nav-link">
+						<i class="nav-icon fas fa-shopping-cart"></i>
 						<p>
-							Kategori
+							Pesanan
 						</p>
 					</a>
 				</li>
-				<li class="nav-item">
+				<li class="nav-item has-treeview">
 					<a href="<?= base_url('User'); ?>" class="nav-link">
-						<i class="nav-icon fas fa-user"></i>
+						<i class="nav-icon fas fa-users"></i>
 						<p>
-							Pemilih
+							Data User
 						</p>
 					</a>
 				</li>
@@ -91,7 +90,7 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
 					</ul>
 				</li>
 				<li class="nav-item">
-					<a href="#" class="nav-link">
+					<a href="<?= base_url('Setting'); ?>" class="nav-link">
 						<i class="nav-icon fas fa-cog"></i>
 						<p>
 							Setting

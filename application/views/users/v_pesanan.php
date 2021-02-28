@@ -9,10 +9,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <!-- Site wrapper -->
 <div class="wrapper">
-<?php $this->load->view('template/v_navbar') ?>
-<?php $this->load->view('template/v_sidebar') ?>
-<?php $this->load->view('konten/k_user') ?>
-<?php $this->load->view('template/v_footer') ?>
+	<?php $this->load->view('template/v_navbar') ?>
+	<?php $this->load->view('template/v_sidebar') ?>
+	<?php $this->load->view('konten/k_pesanan') ?>
+	<?php $this->load->view('template/v_footer') ?>
 </div>
 
 <!-- jQuery -->
@@ -30,7 +30,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <script src="<?= base_url('vendor/almasaeed2010/adminlte') ?>/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <script>
 	$(function () {
-		$("#tabelUser").DataTable({
+		$("#tabelPesanan").DataTable({
 			"responsive": true,
 			"autoWidth": false,
 		});
