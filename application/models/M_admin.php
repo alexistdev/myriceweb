@@ -40,4 +40,22 @@ class M_admin extends CI_Model
 		$this->db->where('id_kategori', $id);
 		$this->db->delete('kategori');
 	}
+
+	public function simpan_merek($dataMerek)
+	{
+		$this->db->insert("merek",$dataMerek);
+	}
+
+	public function get_data_merek($data)
+	{
+		if($data != null){
+			$this->db->where('id_merek',$data);
+		}
+		return $this->db->get('merek');
+	}
+	public function hapus_merek($id)
+	{
+		$this->db->where('id_merek', $id);
+		$this->db->delete('merek');
+	}
 }

@@ -79,10 +79,5 @@ class Kategori extends CI_Controller {
 		}
 	}
 
-	/** Method untuk Logout */
-	public function logout()
-	{
-		$this->session->sess_destroy();
-		redirect('Login');
-	}
+
 }
